@@ -1,0 +1,11 @@
+{
+    "extends": "airbnb/base",
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "comma-dangle": ["error", "never"]
+    }
+}
