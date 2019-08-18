@@ -1,9 +1,13 @@
 function isPrime(n) {
+    if (n === 2) {
+        return true;
+    }
+
     if (n < 2) {
         return false;
     }
 
-    for (let j = 2, s = Math.sqrt(n); j <= s; j += 1) {
+    for (let j = 3, s = Math.sqrt(n); j <= s; j += 2) {
         if (n % j === 0) {
             return false;
         }
