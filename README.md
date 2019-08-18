@@ -1,5 +1,7 @@
 # js-course-yandex-nsk
 
+[![CircleCI](https://circleci.com/gh/noveogroup-amorgunov/js-course-yandex-nsk.svg?style=svg)](https://circleci.com/gh/noveogroup-amorgunov/js-course-yandex-nsk)
+
 Решения задач с codewars по курсу JS от Яндекса в Новосибирске.
 
 Для работы eslint должна быть установлена [nodejs](https://nodejs.org/en/),
