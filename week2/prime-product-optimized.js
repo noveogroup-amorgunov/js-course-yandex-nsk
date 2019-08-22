@@ -17,7 +17,7 @@ function isPrime(n) {
 }
 
 function primeProductOptimized(n) {
-    for (let i = Math.floor(n); i > 1; i -= 1) {
+    for (let i = Math.floor(n / 2); i > 1; i -= 1) {
         const j = n - i;
 
         if (isPrime(i) && isPrime(j)) {
