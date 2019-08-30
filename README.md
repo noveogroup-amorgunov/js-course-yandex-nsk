@@ -28,4 +28,17 @@ npm install
 
 ### Неделя 3
 
+- [Maze Runner](https://www.codewars.com/kata/58663693b359c4a6560001d6)
+- [Digital cypher vol 3 - missing key](https://www.codewars.com/kata/5930d8a4b8c2d9e11500002a)
+- [Pokemon Damage Calculator](https://www.codewars.com/kata/536e9a7973130a06eb000e9f)
+- [Killer Garage Door](https://www.codewars.com/kata/58b1ae711fcffa34090000ea)
+
+### Неделя 4
+
+- [Reusable memoisation](https://www.codewars.com/kata/5b773b698adeaeb6b80000df)
+- [Function composition](https://www.codewars.com/kata/5655c60db4c2ce0c2e000026)
+- [The Crockford Invocation](https://www.codewars.com/kata/57e7d21f6603f6e31f00007c)
+
+### Неделя 5
+
 ![](https://media3.giphy.com/media/CjmvTCZf2U3p09Cn0h/giphy.gif?cid=790b7611b1ec880e8626f2e0ffd0f0e31dd293ca181f903d&rid=giphy.gif)
