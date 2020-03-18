@@ -1,4 +1,4 @@
-function iterPi(epsilon) {
+export function iterPi(epsilon: number) {
     let result = 1;
     let iterations = 1;
     let sign = -1;
@@ -9,10 +9,5 @@ function iterPi(epsilon) {
         iterations += 1;
     }
 
-    return [
-        iterations,
-        parseFloat((result * 4).toFixed(10))
-    ];
+    return [iterations, parseFloat((result * 4).toFixed(10))];
 }
-
-module.exports = iterPi;

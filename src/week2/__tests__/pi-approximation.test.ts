@@ -1,4 +1,4 @@
-const iterPi = require('../pi-approximation');
+import { iterPi } from '../pi-approximation';
 
 describe('функция pi-approximation', () => {
     test('должна подсчитать PI и количество итеграций с точностью до 0.1', () => {

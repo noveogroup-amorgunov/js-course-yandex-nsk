@@ -1,4 +1,4 @@
-const tvRemote = require('../tv-remote-wrap');
+import { tvRemote } from '../tv-remote-wrap';
 
 describe('функция tv-remote-wrap', () => {
     test('должна подсчитать кол-во кликов для слов в нижнем регистре', () => {

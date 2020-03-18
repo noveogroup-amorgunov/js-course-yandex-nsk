@@ -1,4 +1,4 @@
-function balancedNumber(num) {
+export function balancedNumber(num: number) {
     const strNumber = String(num);
     const steps = Math.round(strNumber.length / 2 - 1);
     let r = 0;
@@ -11,5 +11,3 @@ function balancedNumber(num) {
 
     return l === r ? 'Balanced' : 'Not balanced';
 }
-
-module.exports = balancedNumber;

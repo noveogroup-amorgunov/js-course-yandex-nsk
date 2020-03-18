@@ -1,13 +1,21 @@
 const WIDTH = 7;
 const HEIGHT = 5;
 
+type KeyboardPosition = {
+    x: number;
+    y: number;
+};
+type Keyboard = {
+    [key: string]: KeyboardPosition;
+};
+
 const keyboard = [
     ['a', 'b', 'c', 'd', 'e', '1', '2', '3'],
     ['f', 'g', 'h', 'i', 'j', '4', '5', '6'],
     ['k', 'l', 'm', 'n', 'o', '7', '8', '9'],
     ['p', 'q', 'r', 's', 't', '.', '@', '0'],
     ['u', 'v', 'w', 'x', 'y', 'z', '_', '/'],
-    ['aA', ' ', '', '', '', '', '', '']
+    ['aA', ' ', '', '', '', '', '', ''],
 ];
 
 function generateKeyboardMap() {
@@ -17,25 +25,28 @@ function generateKeyboardMap() {
         });
 
         return acc;
-    }, {});
+    }, {} as Keyboard);
 }
 
-function getClicks({ x, y }, { x: nextX, y: nextY }) {
+function getClicks(
+    { x, y }: KeyboardPosition,
+    { x: nextX, y: nextY }: KeyboardPosition,
+) {
     const xMoves = Math.min(
         Math.abs(nextX - x),
         x + Math.abs(WIDTH - nextX + 1),
-        nextX + Math.abs(WIDTH - x + 1)
+        nextX + Math.abs(WIDTH - x + 1),
     );
     const yMoves = Math.min(
         Math.abs(nextY - y),
         y + Math.abs(HEIGHT - nextY + 1),
-        nextY + Math.abs(HEIGHT - y + 1)
+        nextY + Math.abs(HEIGHT - y + 1),
     );
 
     return xMoves + yMoves + 1;
 }
 
-function tvRemote(text) {
+export function tvRemote(text: string) {
     const keyboardMap = generateKeyboardMap();
     const path = text.split('');
     const START_KEY = keyboardMap.a;
@@ -45,7 +56,7 @@ function tvRemote(text) {
     let currentKeyPosition = START_KEY;
     let clicks = 0;
 
-    path.forEach((rawKey) => {
+    path.forEach(rawKey => {
         const key = rawKey.toLowerCase();
         const inUpperCase = key !== rawKey;
         const isLetter = key !== key.toUpperCase();
@@ -63,5 +74,3 @@ function tvRemote(text) {
 
     return clicks;
 }
-
-module.exports = tvRemote;

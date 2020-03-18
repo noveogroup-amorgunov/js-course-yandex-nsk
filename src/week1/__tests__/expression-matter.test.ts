@@ -1,4 +1,4 @@
-const expressionMatter = require('../expression-matter');
+import { expressionMatter } from '../expression-matter';
 
 describe('функция expression-matter', () => {
     test('должна вернуть максимальное значение', () => {
