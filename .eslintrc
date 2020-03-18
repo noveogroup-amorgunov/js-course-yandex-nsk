@@ -23,11 +23,12 @@
         }
     },
     "rules": {
+        "space-before-function-paren": "off",
+        "indent": ["error", 4, {"SwitchCase": 1}],
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": "error",
         "no-useless-constructor": "off",
         "@typescript-eslint/no-useless-constructor": "error",
-        "indent": ["error", 4],
         "arrow-parens": ["error", "as-needed"],
         "import/extensions": "off",
         "implicit-arrow-linebreak": "off",

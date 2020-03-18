@@ -36,4 +36,3 @@ export function primeProduct(n: number) {
 
     return result;
 }
-

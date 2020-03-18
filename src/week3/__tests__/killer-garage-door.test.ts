@@ -1,4 +1,4 @@
-const door = require('../killer-garage-door');
+import { door } from '../killer-garage-door';
 
 describe('дверь', () => {
     describe('без препятствия', () => {

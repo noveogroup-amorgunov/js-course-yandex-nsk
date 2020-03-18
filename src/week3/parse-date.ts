@@ -1,4 +1,4 @@
-function parseDate(str = '') {
+export function parseDate(str = '') {
     const result = str.match(/(\d{4})-(\d{2})-(\d{2})/);
 
     if (!result) {
@@ -9,5 +9,3 @@ function parseDate(str = '') {
 
     return { year, month, day };
 }
-
-module.exports = parseDate;

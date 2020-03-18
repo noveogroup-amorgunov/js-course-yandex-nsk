@@ -1,34 +1,40 @@
 const effectiveValue = {
     SUPER_EFFECTIVE: 2,
     NEUTRAL: 1,
-    NOT_EFFECTIVE: 0.5
+    NOT_EFFECTIVE: 0.5,
 };
 
-const effectivenessMap = {
+const effectivenessMap: Record<string, Record<string, number>> = {
     fire: {
         grass: effectiveValue.SUPER_EFFECTIVE,
         water: effectiveValue.NOT_EFFECTIVE,
-        fire: effectiveValue.NOT_EFFECTIVE
+        fire: effectiveValue.NOT_EFFECTIVE,
     },
     grass: {
         water: effectiveValue.SUPER_EFFECTIVE,
         fire: effectiveValue.NOT_EFFECTIVE,
-        grass: effectiveValue.NOT_EFFECTIVE
+        grass: effectiveValue.NOT_EFFECTIVE,
     },
     water: {
         fire: effectiveValue.SUPER_EFFECTIVE,
         grass: effectiveValue.NOT_EFFECTIVE,
         electric: effectiveValue.NOT_EFFECTIVE,
-        water: effectiveValue.NOT_EFFECTIVE
+        water: effectiveValue.NOT_EFFECTIVE,
     },
     electric: {
         water: effectiveValue.SUPER_EFFECTIVE,
-        electric: effectiveValue.NOT_EFFECTIVE
-    }
+        electric: effectiveValue.NOT_EFFECTIVE,
+    },
 };
 
-function calculateDamage(yourType, opponentType, attack, defense) {
-    const effectiveness = effectivenessMap[yourType][opponentType] || effectiveValue.NEUTRAL;
+export function calculateDamage(
+    yourType: string,
+    opponentType: string,
+    attack: number,
+    defense: number,
+) {
+    const effectiveness =
+        effectivenessMap[yourType][opponentType] || effectiveValue.NEUTRAL;
 
     return Math.ceil(50 * (attack / defense) * effectiveness);
 }
