@@ -26,7 +26,7 @@ npm install
 ### Неделя 2
 
 - [The queen on the chessboard](https://www.codewars.com/kata/5aa1031a7c7a532be30000e5)
-- [PI approximation](https://www.codewars.com/kata/550527b108b86f700000073f)
+- [PI approximation](https://www.codewars.com/kata/550527b108b86f700000073f) (+бенчмарк)
 - [Simple Fun #303: Prime Product](https://www.codewars.com/kata/592538b3071ba54511000219)
 - [TV Remote (wrap)](https://www.codewars.com/kata/5b2c2c95b6989da552000120)* (дополнительная задача)
 
