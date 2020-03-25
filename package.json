@@ -5,19 +5,29 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ."
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
   },
   "keywords": [],
   "author": "Alexander Morgunov",
   "license": "ISC",
   "devDependencies": {
+    "@types/benchmark": "^1.0.31",
     "@types/jest": "24.0.17",
     "@types/node": "12.7.0",
-    "eslint": "6.2.2",
-    "eslint-config-airbnb": "17.1.1",
-    "eslint-plugin-import": "2.18.2",
+    "@typescript-eslint/eslint-plugin": "2.24.0",
+    "@typescript-eslint/parser": "2.24.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.19.0",
     "husky": "3.0.4",
-    "jest": "24.9.0"
+    "jest": "25.1.0",
+    "prettier": "1.19.1",
+    "ts-jest": "25.2.1",
+    "ts-node": "8.6.2",
+    "typescript": "3.8.3"
   },
   "dependencies": {
     "benchmark": "2.1.4"
@@ -25,6 +35,11 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
+    }
+  },
+  "jest": {
+    "transform": {
+      ".+\\.tsx?$": "ts-jest"
     }
   }
 }
